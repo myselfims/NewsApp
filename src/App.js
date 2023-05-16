@@ -35,7 +35,6 @@ export class App extends Component {
       <div className={`bg-${this.state.mode}`}>
         <Navbar mode={this.state.mode} toggler={this.toggleMode} />
         <div className={`container d-flex justify-content-center bg-${this.state.mode}`}>
-          <Item key='home' mode={this.state.mode} category='all' />
         <Routes>
           <Route exact path='/' element={<Item key='all' mode={this.state.mode} category='all' />} />
           <Route exact path='/NewsApp/' element={<Item key='home' mode={this.state.mode} category='all' />} />
