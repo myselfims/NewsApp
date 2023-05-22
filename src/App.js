@@ -12,6 +12,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Slider from './components/Slider';
 
 export class App extends Component {
   constructor(){
@@ -29,11 +30,15 @@ export class App extends Component {
     //   this.setState({mode:'light'})
     // }
   }
+ 
   render() {
     return (
       <Router>
       <div className={`bg-${this.state.mode}`}>
         <Navbar mode={this.state.mode} toggler={this.toggleMode} />
+        <div className="container d-flex justify-content-center">
+          <Slider />
+        </div>
         <div className={`container d-flex justify-content-center bg-${this.state.mode}`}>
         <Routes>
           <Route exact path='/' element={<Item key='all' mode={this.state.mode} category='all' />} />
